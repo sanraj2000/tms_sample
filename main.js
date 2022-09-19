@@ -19,13 +19,12 @@ console.log("started");
             $scope.allrows_cconns2 =response2.data;
         
           $scope.totalCount_cc2=$scope.allrows_cconns2.length;
-           }, function(){alert("failed in loading file for AWS_US");});
+           }, function(){alert("failed in loading file for DEV");});
     
 
         
 
-  // ---------------------------------------- end of AWS US --------------------------------
-
+  
      // STAGE
             var reposinfo1 = {
               method: 'GET',
@@ -36,13 +35,13 @@ console.log("started");
             $scope.allrows_cconns =response.data;
 
           $scope.totalCount_cc=$scope.allrows_cconns.length;
-          }, function(){alert("failed in loading file for AWS_EU");});
+          }, function(){alert("failed in loading file for STAGE");});
 
 
 
           
 
-// end of AWS EU
+
 
 
     // INT
@@ -55,7 +54,7 @@ console.log("started");
                   $scope.allrows_cconns3 =response.data;
 
                 $scope.totalCount_cc3=$scope.allrows_cconns3.length;
-                }, function(){alert("failed in loading file for AWS_AU");});
+                }, function(){alert("failed in loading file for INT");});
 
 
 
