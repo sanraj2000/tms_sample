@@ -8,9 +8,8 @@ console.log("started");
 	app.controller('cetCtrl', function($scope,$http,$window, $location, $anchorScroll, $timeout,$filter) {
 
 
-    // part 2 starts
-
-            // AWS US 1012
+ 
+            // DEV
             var reposinfo2 = {
               method: 'GET',
              url: "./output/stage.json",
@@ -27,7 +26,7 @@ console.log("started");
 
   // ---------------------------------------- end of AWS US --------------------------------
 
-     // AWS EU
+     // STAGE
             var reposinfo1 = {
               method: 'GET',
             url: "./output/AWS.json",
@@ -46,7 +45,7 @@ console.log("started");
 // end of AWS EU
 
 
-    // AWS AU
+    // INT
                   var aws_au_1012 = {
                     method: 'GET',
                   url: "./output/AWS.json",
