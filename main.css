@@ -1,0 +1,172 @@
+body {
+  font: 300 14px/1.2 'Public Sans', sans-serif;
+}
+
+.container-fluid {
+  max-width: 90%;
+}
+.headerbgimage{
+	background-image: url("../img/vaccine_banner.png");
+}
+
+.headerBlock{
+  background-color: #011E3C;
+  height: 138px;
+  padding-top: 30px;
+  background-image: url("../img/sag_cloud2.png");
+  background-repeat: no-repeat, repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+.cle_product_Block{
+  background-color: #F2F2EA;
+}
+
+.repoBlock1{
+  background-color: white;
+  margin-left: 5px;
+  max-width: 368px;
+  margin-right: -1px;
+  margin-bottom: 35px;
+
+}
+
+
+.myreposBlock{
+  background-color: #F2F2EA;
+}
+
+.repoBlock2{
+  background-color: white;
+  margin-left: 50px;
+  max-width: 368px;
+  margin-right: -10px;
+  margin-bottom: 35px;
+
+}
+
+
+.connbg-image{
+    background-image: url("../img/sagtc.jpg");
+    height:80px;
+}
+
+
+.main-header {
+  color: #fff!important;
+  background-color:#011E3C;;
+}
+
+.tab-header {
+    color: #fff!important;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: groove;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+//end of tabs
+
+
+
+.bottonBoxBig{
+    margin-top: 10px;
+}
+.bottonBoxSmallEnds{
+    margin: 1px;
+    padding-top: 3px;
+    background-color: #3CC1B7 !important;
+}
+.bottonBoxSmallMiddle{
+        margin: 1px;
+        padding-top: 3px;
+        background-color: #D9EC27 !important;
+}
+
+
+
+/* ################Tooltip START ################ */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.statusLine1{
+  height:2px;
+  border-width:0;color:gray;
+  background-color:green; 
+  width:100%;
+   margin-top: -16px;
+}
+.statusLine2{
+  height:2px;
+  border-width:0;color:gray;
+  background-color:red; 
+  width:100%;
+   margin-top: -16px;
+}
+
+
+.vbutton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+ // padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+/* ################Tooltip END ################ */
