@@ -8,9 +8,9 @@ console.log("started");
 	app.controller('cetCtrl', function($scope,$http,$window, $location, $anchorScroll, $timeout,$filter) {
 
 
-   
+    // part 2 starts
 
-            // DEV
+            // AWS US 1012
             var reposinfo2 = {
               method: 'GET',
              url: "./output/det.json",
@@ -26,9 +26,9 @@ console.log("started");
 
         
 
-  
+  // ---------------------------------------- end of AWS US --------------------------------
 
-     // STAGE
+     // AWS EU
             var reposinfo1 = {
               method: 'GET',
             url: "./output/det.json",
@@ -42,11 +42,11 @@ console.log("started");
 
 
 
+// end of AWS EU
 
 
-
-    // INT
-                  var reposinfo2 = {
+    // AWS AU
+                  var aws_au_1012 = {
                     method: 'GET',
                   url: "./output/det.json",
                     headers: {"Content-Type": "application/json"}
@@ -58,6 +58,8 @@ console.log("started");
                 }, function(){alert("failed in loading file for AWS_AU");});
 
     
+
+     // ----------##########################------ Start of Azure US -----------------################################---------------
 
               
   
