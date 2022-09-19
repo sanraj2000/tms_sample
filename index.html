@@ -210,8 +210,8 @@
               <td>{{ connD.tier }}</td>
               <td>{{ connD.tenantStatus }}</td>
               <td>{{ formatVersion(connD.currentVersion) }}</td>
-              <td>{{ connD.creationDate }}</td>
-              <td>{{ connD.latestChangeDate }}</td>
+              <td>{{ formatDate{connD.creationDate} }}</td>
+              <td>{{ formatDate{connD.latestChangeDate} }}</td>
             </tr>
           </table>
      </div>
@@ -260,8 +260,8 @@
               <td>{{ connD2.tier }}</td>
               <td>{{ connD2.tenantStatus }}</td>
               <td>{{ formatVersion(connD2.currentVersion) }}</td>
-              <td>{{ connD2.creationDate }}</td>
-              <td>{{ connD2.latestChangeDate }}</td>
+              <td>{{ formatDate{connD2.creationDate} }}</td>
+              <td>{{ formatDate{connD2.latestChangeDate} }}</td>
             </tr>
           </table>
   </div>
