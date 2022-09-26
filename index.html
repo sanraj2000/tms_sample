@@ -42,7 +42,7 @@
         <button class="tablinks" onclick="connectorTabs('DEVTENANTS')"  id="defaultOpen" style="background: darkseagreen;">DEV</button>
         <button class="tablinks" onclick="connectorTabs('STAGETENANTS') " style="background: darkseagreen;">STAGE</button>        
         <button class="tablinks" onclick="connectorTabs('INTTENANTS')" style="background: darkseagreen;">INT</button>
-       
+        <button class="tablinks" onclick="connectorTabs('TESTJOBS')" >TEST JOBS</button>
 
       </div>
     
@@ -268,9 +268,228 @@
  
 
 
- 
+    
+     
+  <div id="TESTJOBS" class="container-fluid wmiotabtype tabcontent">
+    
+
+    <p>Schedules in next 30 days. For now only 10.12</p>
+    
+
+    <div class="tab" style=" margin-right: 100px; margin-top: 20px; width: 500px;">
+       
+        <button class="tablinks" onclick="connectorTabs2('AWSSchedules')" style=" background: darkseagreen; width: 30%;" id="defaultOpen2">AWS</button>
+        <button class="tablinks" onclick="connectorTabs2('AzureSchedules')" style="background: darkturquoise; width: 30%;" >Azure</button> 
+        <button class="tablinks" onclick="connectorTabs2('ProdFixesTrail')" style=" width: 33%;" >Prod Fixes</button> 
+      </div>
+
+    <div id="AWSSchedules" class="wmiotabtype2 tabcontent"> 
+
+        <div >
+            <h2>Schedules AWS</h2>
+            
+            <div class="row">
+              <div class="col-md-4" >
+    
+                <div>
+                    <!--                 AWS US                 -->
+                    <div class="container-fluid  col text-white" style="background-color:rgb(131, 219, 235);">
+                        <p class="lead"> AWS US  : {{ totalschedules1_c }}</p>
+                    </div>
+                    <table class="table table-striped table-hover table-bordered">
+                        <tr ng-repeat="schedules in allrows_schedules1">
+                          <td>{{ schedules.tenantName }}</td>
+                          <td>{{ schedules.scheduledFix.scheduledDate }}</td>
+                        </tr>
+                      </table>
+                </div>
+    
+              </div>
+          
+              <div class="col-md-4" >
+                <div>
+                     
+                    <div>
+                        <!--                 AWS EU                 -->
+                        <div class="container-fluid  col text-white" style="background-color:rgb(222, 218, 248);">
+                            <p class="lead"> AWS EU  : {{ totalschedules2_c }}</p>
+                        </div>
+                        <table class="table table-striped table-hover table-bordered">
+                            <tr ng-repeat="schedules in allrows_schedules2">
+                              <td>{{ schedules.tenantName }}</td>
+                              <td>{{ schedules.scheduledFix.scheduledDate }}</td>
+                            </tr>
+                          </table>
+                    </div>
+
+                </div>
+              </div>
+          
+              <div class="col-md-4" >
+               
+                <div>
+                    <!--                 AWS AU                 -->
+                    <div class="container-fluid  col text-white" style="background-color:rgb(198, 241, 238);">
+                        <p class="lead"> AWS AU  : {{ totalschedules3_c }}</p>
+                    </div>
+                    <table class="table table-striped table-hover table-bordered">
+                        <tr ng-repeat="schedules in allrows_schedules3">
+                          <td>{{ schedules.tenantName }}</td>
+                          <td>{{ schedules.scheduledFix.scheduledDate }}</td>
+                        </tr>
+                      </table>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div id="AzureSchedules" class="  wmiotabtype2 tabcontent"> 
+        
+        <div >
+            <h2>Schedules Azure</h2>
+            
+            <div class="row">
+              <div class="col-md-4" >
+    
+                <div>
+                    <!--                 Azure US                 -->
+                    <div class="container-fluid  col text-white" style="background-color:rgb(131, 219, 235);">
+                        <p class="lead"> Azure US  : {{ totalschedules1_c_az }}</p>
+                    </div>
+                    <table class="table table-striped table-hover table-bordered">
+                        <tr ng-repeat="schedules in allrows_az_schedules1">
+                          <td>{{ schedules.tenantName }}</td>
+                          <td>{{ schedules.scheduledFix.scheduledDate }}</td>
+                        </tr>
+                      </table>
+                </div>
+    
+              </div>
+          
+              <div class="col-md-4" >
+                <div>
+                     
+                    <div>
+                        <!--                 Azure EU                 -->
+                        <div class="container-fluid  col text-white" style="background-color:rgb(222, 218, 248);">
+                            <p class="lead"> Azure EU  : {{ totalschedules2_c_az }}</p>
+                        </div>
+                        <table class="table table-striped table-hover table-bordered">
+                            <tr ng-repeat="schedules in allrows_az_schedules2">
+                              <td>{{ schedules.tenantName }}</td>
+                              <td>{{ schedules.scheduledFix.scheduledDate }}</td>
+                            </tr>
+                          </table>
+                    </div>
+
+                </div>
+              </div>
+          
+              <div class="col-md-4" >
+               
+                <div>
+                    <!--                 Azure AU                 -->
+                    <div class="container-fluid  col text-white" style="background-color:rgb(198, 241, 238);">
+                        <p class="lead"> Azure AU  : {{ totalschedules3_c_az }}</p>
+                    </div>
+                    <table class="table table-striped table-hover table-bordered">
+                        <tr ng-repeat="schedules in allrows_az_schedules3">
+                          <td>{{ schedules.tenantName }}</td>
+                          <td>{{ schedules.scheduledFix.scheduledDate }}</td>
+                        </tr>
+                      </table>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+
+    </div>
+
+    
+    <div id="ProdFixesTrail" class="  wmiotabtype2 tabcontent"> 
+        Comming soon...
+        <div class="row " id="myrepos">
+
+            <div class="col cle_product_Block">
+            
+                <div class="row" style="margin-right: 0px !important; margin-left: 0px !important; width:100%">
+                    <div class="col">
+                        <div class="w3-bar tab-header container-fluid" style="text-align: center;">
+                            <button id="p1" class="vbutton" ng-click="callWorkflow('AWS_US')">AWS US</button>
+                        </div>
+            
+                    </div>
+            </div>
+            <div class="row" style="margin-right: 0px !important; margin-left: 0px !important; width:100%">
+        
+                <div class="row  repoBlock1" ng-repeat="reporecord in alllogs | filter:connSearch | orderBy:reporecord.status: false"  data-toggle="tooltip" data-placement="left" title=" Remarks: {{ reporecord.column_comments }}" >
+                     
+                    <hr class="statusLine1"  >
+                    <div class="d-flex   " style="  width: 98%;">
+                        <label> Total :  {{ reporecord.count }} </label>  
+                    </div>
+    
+                    <div class="d-flex " style="  width: 98%;">
+                        <label> Pass :  {{ reporecord.batch_no }} </label>  
+                    </div>
+    
+                    <div class="d-flex  " style="  width: 98%;">
+                        <label> Fail :  {{ reporecord.comments }} </label>                
+                    </div>
+    
+        
+            </div>
+            </div>
+        </div>
+
+        <div class="col cle_product_Block">
+            
+            <div class="row" style="margin-right: 0px !important; margin-left: 0px !important; width:100%">
+                <div class="col">
+                    <div class="w3-bar tab-header container-fluid" style="text-align: center;">
+                        <button id="p1" class="vbutton" ng-click="callWorkflow('OnPrem')">AWS EU</button>
+                    </div>
+        
+                </div>
+        </div>
+        <div class="row" style="margin-right: 0px !important; margin-left: 0px !important; width:100%">
+    
+            <div class="row  repoBlock1" ng-repeat="reporecord in alllogs | filter:connSearch | orderBy:reporecord.status: false"  data-toggle="tooltip" data-placement="left" title=" Remarks: {{ reporecord.column_comments }}" >
+                 
+                <hr class="statusLine1"  >
+                <div class="d-flex   " style="  width: 98%;">
+                    <label> Total :  {{ reporecord.count }} </label>  
+                </div>
+
+                <div class="d-flex " style="  width: 98%;">
+                    <label> Pass :  {{ reporecord.batch_no }} </label>  
+                </div>
+
+                <div class="d-flex  " style="  width: 98%;">
+                    <label> Fail :  {{ reporecord.comments }} </label>                
+                </div>
+
+    
+        </div>
         </div>
     </div>
+ 
+    
+    
+    
+    
+      
 
         </div>
 
